@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "tabbar/home/index",
+    "tabbar/cart/index",
+    "tabbar/me/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "fruit",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#1aad0f",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "tabbar/home/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-acitve.png"
+      },
+      {
+        "pagePath": "tabbar/cart/index",
+        "text": "购物车",
+        "iconPath": "static/tabbar/cart.png",
+        "selectedIconPath": "static/tabbar/cart-active.png"
+      },
+      {
+        "pagePath": "tabbar/me/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/me.png",
+        "selectedIconPath": "static/tabbar/me-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
