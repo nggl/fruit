@@ -1,0 +1,35 @@
+<template name="goods-col">
+	<view class="goods-col">
+		<image src="{{url}}" mode="aspectFit" />
+		<view class="tt">{{title}}</view>
+		<view class="tip">
+			<view class="tip-num">
+				<view>
+					<text>已售：</text>{{out}}
+				</view>
+				<view>
+					库存：{{having}}
+				</view>
+			</view>
+			<view class="tip-price">¥{{price}}</view>
+		</view>
+	</view>
+</template>
+
+<template name="goods-row">
+	<view class="goods-row">
+		<view class="cover">
+			<image src="{{url}}" mode="widthFix"/>
+		</view>
+		<view class="goods-row-info">
+			<view class="tt">{{title}}</view>
+			<view class="price">
+				<text class="new">¥{{price}}</text>
+				<text class="old">¥{{original}}</text>
+			</view>
+			<view class="out">
+				已售：{{out}}
+			</view>
+		</view>
+	</view>
+</template>

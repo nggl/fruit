@@ -1,0 +1,17 @@
+<template name="home-tt">
+	<view class="home-tt">
+		<view class="tt">{{title}}</view>
+		<view class="ct">
+			<view>{{content}}</view>
+		</view>
+	</view>
+</template>
+
+<template name="home-tt-strong">
+	<view class="home-tt">
+		<view class="tt strong">{{title}}</view>
+		<view class="ct">
+			<view>{{content}}</view>
+		</view>
+	</view>
+</template>

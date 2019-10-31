@@ -1,0 +1,19 @@
+<!-- cart calculation row -->
+<view class="ng-row">
+	<view class="cover">
+		<image src="{{rowItem.cover}}" mode="widthFix" />
+	</view>
+	<view class="info">
+		<view class="tt">{{rowItem.tt}}</view>
+		<view class="desc">规格：{{rowItem.norms}}</view>
+		<view class="pool">
+			<view class="price">¥{{rowItem.price}}</view>
+			<view class="action">
+				<image class="reduce" src="/static/cart/reduce.png" mode="widthFix" bindtap="reduceEvent"/>
+				<input type="number" value="{{num}}" bindconfirm="numChangeEvent" />
+				<image class="add" src="/static/cart/add.png" mode="widthFix" bindtap="addEvent"/>
+			</view>
+		</view>
+		<view class="close" bindtap="delItem">删除</view>
+	</view>
+</view>

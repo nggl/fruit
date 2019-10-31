@@ -1,0 +1,86 @@
+.goods-col {
+	padding: 20rpx 24rpx;
+	border-radius: 12rpx;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+
+.goods-bg {
+	background-color: #f6f6f6;
+}
+
+.goods-col image {
+	width: 290rpx;
+	height: 204rpx;
+}
+.goods-col .tt {
+	font-size: 24rpx;
+	line-height: 32rpx;
+	text-align: justify;
+	margin: 12rpx 0;
+	color: #333;
+}
+.goods-col .tip {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 12rpx;
+}
+.goods-col .tip .tip-num {
+	display: flex;
+	flex-direction: column;
+	font-size: 20rpx;
+	color: #777;
+}
+.goods-col .tip .tip-num text {
+	color: #db5477;
+}
+.goods-col .tip .tip-price {
+	color: #f33;
+	font-size: 32rpx;
+}
+
+
+.goods-row {
+	display: flex;
+	align-items: center;
+}
+.goods-row .cover {
+	padding-right: 16rpx;
+}
+.goods-row .cover image {
+	width: 226rpx;
+	/* height: 190rpx; */
+	display: block;
+}
+.goods-row .goods-row-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.goods-row .goods-row-info .tt {
+	font-size: 32rpx;
+	color: #333;
+	line-height: 42rpx;
+	text-align: justify;
+}
+.goods-row .goods-row-info .price {
+	display: flex;
+	align-items: baseline;
+}
+.goods-row .goods-row-info .price .old {
+	font-size: 28rpx;
+	color: #444;
+	text-decoration: line-through;
+	margin-left: 30rpx;
+}
+.goods-row .goods-row-info .price .new {
+	font-size: 32rpx;
+	color: #da2121;
+	font-weight: bold;
+}
+.goods-row .goods-row-info .out {
+	font-size: 28rpx;
+	color: #333;
+}

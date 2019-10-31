@@ -1,0 +1,59 @@
+/* components/ng-row/index.wxss */
+.ng-row {
+	display: flex;
+	align-items: center;
+}
+.ng-row .cover {
+	padding-right: 12rpx;
+}
+.ng-row .cover image {
+	width: 260rpx;
+}
+.ng-row .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	padding: 50rpx 0;
+}
+.ng-row .info .close {
+	position: absolute;
+	right: 12rpx;
+	top: 0;
+	color: #666;
+	font-size: 28rpx;
+	border-radius: 10rpx;
+	padding: 4rpx;
+	border: 2rpx solid #666;
+}
+.ng-row .info .tt {
+	font-size: 32rpx;
+	color: #333;
+}
+.ng-row .info .desc {
+	font-size: 24rpx;
+	color: #666;
+}
+.ng-row .info .pool {
+	margin-top: 12rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ng-row .info .pool .price {
+	color: #da2121;
+	font-size: 32rpx;
+}
+.ng-row .info .pool .action {
+	display: flex;
+	align-items: center;
+}
+.ng-row .info .pool .action image {
+	width: 36rpx;
+}
+.ng-row .info .pool .action input {
+	width: 2.4em;
+	text-align: center;
+	border: 2rpx solid #da2121;
+	margin: 0 20rpx;
+}

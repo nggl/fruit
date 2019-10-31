@@ -1,0 +1,52 @@
+.home-tt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 24rpx 0;
+}
+.home-tt .tt {
+	font-size: 36rpx;
+	color: #333;
+	line-height: 54rpx;
+}
+.home-tt .strong {
+	font-weight: 900;
+}
+.home-tt .ct {
+	font-size: 24rpx;
+	color: #666;
+	position: relative;
+}
+.home-tt .ct::before,
+.home-tt .ct::after {
+	width: 168rpx;
+	height: 4rpx;
+}
+.home-tt .ct::after,
+.home-tt .ct::before,
+.home-tt .ct view::after,
+.home-tt .ct view::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #eee;
+}
+.home-tt .ct::before {
+	left: -200rpx;
+}
+.home-tt .ct::after {
+	right: -200rpx;
+}
+.home-tt .ct view::after,
+.home-tt .ct view::before {
+	width: 8rpx;
+	height: 8rpx;
+	border-radius: 50%;
+}
+.home-tt .ct view::after {
+	right: -32rpx;
+}
+.home-tt .ct view::before {
+	left: -32rpx;
+}
