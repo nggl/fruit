@@ -50,6 +50,7 @@
 }
 .ng-row .info .pool .action image {
 	width: 36rpx;
+	height: 36rpx;
 }
 .ng-row .info .pool .action input {
 	width: 2.4em;

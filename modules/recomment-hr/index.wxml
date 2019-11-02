@@ -1,0 +1,9 @@
+<template name="hr">
+    <view class="hr">
+        <view>
+            <image class="lt" src="/static/cart/left.png" mode="aspectFill" />
+            {{label}}
+            <image class="rb" src="/static/cart/right.png" mode="aspectFill" />
+        </view>
+    </view>
+</template>

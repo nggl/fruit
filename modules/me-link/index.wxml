@@ -1,0 +1,11 @@
+<template name="link">
+    <navigator 
+    class="link-item {{index !== 0 ? 'bdt' : ''}}"
+    url="{{ink}}">
+        <view class="link-txt">
+            <image class="link-icon" src="{{icon}}" mode="aspectFit" />
+            <view>{{name}}</view>
+        </view>
+        <image class="link-arrow" src="/static/me/arrow-right.png" mode="aspectFit" />
+    </navigator>
+</template>

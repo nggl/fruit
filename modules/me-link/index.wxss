@@ -1,0 +1,33 @@
+.link-item {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	padding: 30rpx 20rpx;
+}
+.link-item .link-txt {
+	display: flex;
+	align-items: center;
+}
+.link-item .link-txt .link-icon {
+	width: 40rpx;
+	height: 40rpx;
+}
+.link-item .link-txt view {
+	font-size: 28rpx;
+	color: #444;
+	margin-left: 12rpx;
+}
+.link-item .link-arrow {
+	width: 42rpx;
+	height: 42rpx;
+}
+.bdt::after {
+	content: "";
+	width: 94%;
+	height: 2rpx;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #f3f3f3;
+}

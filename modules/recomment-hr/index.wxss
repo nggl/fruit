@@ -1,0 +1,40 @@
+.hr {
+	display: flex;
+	justify-content: center;
+	color: #f40;
+	font-size: 28rpx;
+	padding: 30rpx 0;
+	margin-top: 20rpx;
+}
+.hr view {
+	position: relative;
+}
+.hr view::before,
+.hr view::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 240rpx;
+	height: 2rpx;
+	background-color: #f40;
+}
+.hr view::before {
+	left: -280rpx;
+}
+.hr view::after {
+	right: -280rpx;
+}
+.hr image {
+	width: 24rpx;
+	height: 24rpx;
+	position: absolute;
+}
+.hr .lt {
+	left: -20rpx;
+	top: -10rpx;
+}
+.hr .rb {
+	right: -20rpx;
+	bottom: -10rpx;
+}

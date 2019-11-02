@@ -1,8 +1,15 @@
 {
   "pages": [
     "tabbar/home/index",
+    "pages/home/detail/index",
+    "pages/home/side/index",
+    "pages/home/search/index",
     "tabbar/cart/index",
-    "tabbar/me/index"
+    "tabbar/me/index",
+    "pages/me/order/index",
+    "pages/me/vip/index",
+    "pages/me/address/index",
+    "pages/me/question/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
