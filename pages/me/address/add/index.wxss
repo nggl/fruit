@@ -1,0 +1,91 @@
+.form {
+  width: 670rpx;
+  margin: 20rpx auto ;
+  padding: 12rpx 0 60rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.form .img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 30rpx;
+  background-size: 100% 100%;
+}
+.form picker {
+  flex: 1;
+  display: flex;
+}
+.form .input {
+  padding: 30rpx 0 20rpx;
+  display: flex;
+  align-items: center;
+  width: 670rpx;
+  position: relative;
+}
+.form .input input {
+  width: 480rpx;
+}
+.form .input::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 20rpx;
+  width: 550rpx;
+  height: 2rpx;
+  background-color: #eee;
+}
+.form .input-btn {
+  color: #fff;
+  font-size: 28rpx;
+  width: 190rpx;
+  height: 52rpx;
+  border-radius: 26rpx;
+  background-color: #ced3da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form .input .active {
+  background-color: #608fee;
+}
+.action {
+  width: 630rpx;
+  padding: 30rpx 20rpx;
+  margin: 30rpx auto 80rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  color: #333;
+  align-items: center;
+  display: flex;
+}
+.action .img {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 30rpx;
+  background-size: 100% 100%;
+}
+button {
+  border: 0;
+  width: 380rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  color: #fff;
+  font-size: 36rpx;
+  letter-spacing: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+button::after,
+button::before {
+  content: none;
+}
+.register {
+  background-color: #ff4c4c;
+}
+.input-img {
+  width: 15rpx;
+  height: 26rpx;
+}

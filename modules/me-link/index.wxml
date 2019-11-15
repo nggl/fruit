@@ -1,7 +1,7 @@
 <template name="link">
     <navigator 
     class="link-item {{index !== 0 ? 'bdt' : ''}}"
-    url="{{ink}}">
+    url="{{url}}">
         <view class="link-txt">
             <image class="link-icon" src="{{icon}}" mode="aspectFit" />
             <view>{{name}}</view>

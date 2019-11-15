@@ -1,2 +1,88 @@
-<!--pages/home/detail/index.wxml-->
-<text>pages/home/detail/index.wxml</text>
+<view class="action-bar">
+	<navigator  class="back-home" url="/tabbar/home/index" open-type="switchTab">
+		<image src="/static/home/back_home.png" mode="aspectFill" />
+	</navigator>
+	<view class="qrcode" bindtap="createBill">
+		<image src="/static/home/qrimg.png" mode="aspectFill" />
+	</view>
+</view>
+
+<swiper 
+interval="3000"
+indicator-dots 
+indicator-color="#eee" 
+indicator-active-color="#f10" 
+autoplay circular>
+	<swiper-item wx:for="{{swipers}}" wx:key="{{index}}">
+		<image src="{{item}}" mode="aspectFill" />
+	</swiper-item>
+</swiper>
+
+<view class="info">
+	<view class="info-tt">陕西进口水果，超值划算，美味可口</view>
+	<view class="info-price">
+		<view>￥{{288.00}}</view>
+		<text>￥{{888.00}}</text>
+	</view>
+	<view class="info-num">{{342}}人已购买</view>
+</view>
+
+<view class="nav">
+	<view class="nav-item {{navIndex === index ? 'active' : ''}}"
+	hover-class="view-hover"
+	wx:for="{{navs}}" wx:key="{{index}}"
+	data-index="{{index}}"
+	bindtap="navChange">{{item}}</view>
+</view>
+<!-- <import src="/utils/wxParse/wxParse"/>
+<view class="detail">
+	<block wx:if="{{navIndex === 0}}">
+	<template is="wxParse" data="{{wxParseData: views.nodes}}"/>
+	</block>
+</view> -->
+
+
+<view class="addcart" wx:if="{{actionSheet}}" bindtap="close">
+	<view class="addcart-box {{ani ? 'show' : ''}}"
+	data-token="inner">
+		<view class="addcart-box-in" data-token="inner">
+			<text data-token="inner">数量</text>
+			<view class="addcart-box-in-act" data-token="inner">
+				<view catchtap="reduceCount" data-token="inner">-</view>
+				<input type="number" data-token="inner" catchinput="inputCount" value="{{count}}" />
+				<view catchtap="addCount" data-token="inner">+</view>
+			</view>
+		</view>
+		<view class="addcart-box-btn" data-token="inner">
+			<view catchtap="createOrder" data-token="inner">确定</view>
+		</view>
+	</view>
+</view>
+
+<view class="fill-space"></view>
+<view class="ft" wx:if="{{!actionSheet}}">
+	<view class="ft-l">
+		<view class="ft-l-item" bindtap="collectEvent">
+		<block wx:if="{{isCollection}}" >
+			<view class="img icon-fill" />
+			<text class="active">已收藏</text>
+		</block>
+		<block wx:else>
+			<view class="img icon-unfill" />
+			<text>收藏</text>
+		</block>
+		</view>
+		<navigator class="ft-l-item cart"
+		url="/tabbar/cart/index" 
+		open-type="switchTab">
+			<view class="img icon-cart" />
+			<text>购物车</text>
+			<view class="badge" wx:if="{{num > 0}}">{{num}}</view>
+		</navigator>
+	</view> 
+	<view class="ft-r">
+		<view class="ft-r-add" bindtap="add">加入购物车</view>
+		<view class="ft-r-pay" bindtap="pay">立即购买</view>
+	</view>
+</view>
+

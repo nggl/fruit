@@ -1,0 +1,31 @@
+.search-box {
+	display: flex;
+	width: 690rpx;
+	margin: 12rpx 0;
+	padding: 16rpx 30rpx;
+	background-color: #fff;
+	position: sticky;
+}
+.search-box image {
+	position: absolute;
+	width: 32rpx;
+	height: 32rpx;
+	left: 40rpx;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.search-box input {
+	flex: 1;
+	border-radius: 20rpx;
+	font-size: 28rpx;
+	color: #444;
+	padding: 8rpx 12rpx 8rpx 52rpx;
+	background-color: #f1f1f1;
+}
+.search-box .btn {
+	padding: 8rpx 12rpx;
+	margin-left: 16rpx;
+	background-color: #f0f0f0;
+	border-radius: 20rpx;
+	color: #444;
+}

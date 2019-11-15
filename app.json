@@ -4,11 +4,13 @@
     "pages/home/detail/index",
     "pages/home/side/index",
     "pages/home/search/index",
+    "pages/home/order/index",
     "tabbar/cart/index",
     "tabbar/me/index",
     "pages/me/order/index",
     "pages/me/vip/index",
     "pages/me/address/index",
+    "pages/me/address/add/index",
     "pages/me/question/index"
   ],
   "window": {

@@ -1,0 +1,5 @@
+<view class="search-box">
+	<image src="/static/home/search-fill.png" mode="aspectFill" />
+	<input value="{{search}}" bindinput="inputEvent" placeholder="填入搜索内容" />
+	<view class="btn" bindtap="searchEvent" hover-class="view-hover">搜索</view>
+</view>

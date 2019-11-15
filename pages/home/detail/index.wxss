@@ -1,1 +1,277 @@
-/* pages/home/detail/index.wxss */
+.action-bar {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	z-index: 999;
+	right: 40rpx;
+	top: 30rpx;
+}
+.action-bar image {
+	width: 90rpx;
+	height: 90rpx;
+}
+.action-bar .back-home image {
+	display: block;
+}
+.action-bar .qrcode {
+	margin-top: 30rpx;
+}
+
+swiper,
+swiper image {
+	width: 750rpx;
+	height: 750rpx;
+}
+
+
+.info {
+	padding: 20rpx 100rpx 20rpx 30rpx;
+	background-color: #fff;
+	position: relative;
+}
+.info-tt {
+	font-size: 28rpx;
+	color: #333;
+	word-break: break-all;
+	text-align: justify;
+	text-align-last: left;
+}
+.info-price {
+	display: flex;
+	align-items: baseline;
+	margin: 10rpx 0;
+}
+.info-price view {
+	font-size: 44rpx;
+	color: #ff4c4c;
+	margin-right: 8rpx;
+}
+.info-price text {
+	text-decoration: line-through;
+	font-size: 30rpx;
+	color: #666;
+}
+.info-num {
+	font-size: 28rpx;
+	color: #888;
+}
+.info-share {
+	position: absolute;
+	right: 40rpx;
+	bottom: 40rpx;
+}
+.info-share image {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.nav {
+	background-color: #fff;
+	margin-top: 20rpx;
+	padding: 0 30rpx;
+	display: flex;
+}
+.nav-item {
+	flex: 1;
+	position: relative;
+	text-align: center;
+	font-size: 28rpx;
+	padding: 24rpx 0;
+}
+.nav-item::after {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80rpx;
+	height: 6rpx;
+	background-color: #ff4c4c;
+}
+.nav-item.active::after {
+	content: "";
+}
+/* @import "/utils/wxParse/wxParse";
+.detail {
+  padding: 20rpx;
+  overflow: hidden;
+  clear: both;
+  font-size: 28rpx;
+}
+
+.detail image {
+  max-width: 100%;
+  display: block;
+}
+ */
+
+
+.addcart {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.addcart-box {
+	border-radius: 16rpx 16rpx 0 0;
+	background-color: #fff;
+	width: 590rpx;
+	position: absolute;
+	bottom: -999rpx;
+	left: 30rpx;
+	padding: 50rpx;
+}
+.addcart-box.show {
+	bottom: 0;
+	transition: transform 1.8s linear;
+}
+.addcart-box-item-tt {
+	font-size: 24rpx;
+	color: #888;
+	margin-bottom: 16rpx;
+}
+.addcart-box-item-navs {
+	display: flex;
+	margin-bottom: 20rpx;
+}
+.addcart-box-item-navs view {
+	padding: 6rpx 10rpx;
+	border-radius: 12rpx;
+	color: #333;
+	border: 2rpx solid #f0f0f0;
+	font-size: 24rpx;
+	margin-right: 20rpx;
+}
+.addcart-box-item-navs .active {
+	border-color: #ff4c4c;
+	color: #fff;
+	background-color: #ff4c4c;
+}
+.addcart-box-in {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20rpx 0;
+	border-top: 2rpx solid #f2f2f2;
+}
+.addcart-box-in text {
+	color: #777;
+	font-size: 24rpx;
+}
+.addcart-box-in-act {
+	display: flex;
+	align-items: center;
+}
+.addcart-box-in-act view {
+	font-size: 32rpx;
+	color: #333;
+	border: 2rpx solid #f2f2f2;
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 4rpx;
+	line-height: 32rpx;
+	text-align: center;
+}
+.addcart-box-in-act input {
+	width: 2em;
+	text-align: center;
+}
+
+
+.addcart-box-btn {
+	display: flex;
+	justify-content: center;
+	font-size: 28rpx;
+	margin-top: 20rpx;
+	padding: 0 80rpx;
+}
+.addcart-box-btn view {
+	width: 320rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
+	background-color: #ff4c4c;
+	color: #fff;
+	text-align: center;
+	line-height: 80rpx;
+}
+
+.fill-space {
+	height: 110rpx;
+}
+.ft {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	width: 690rpx;
+	padding: 12rpx 30rpx;
+	display: flex;
+	background-color: #fff;
+}
+.ft-l,
+.ft-r {
+	display: flex;
+	flex: 2;
+}
+.ft-l {
+	align-items: center;
+}
+.ft-l-item {
+	flex: 1;
+	font-size: 20rpx;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.ft-l-item .active {
+	color: #ff4c4c;
+}
+.ft-l-item .img {
+	width: 40rpx;
+	height: 40rpx;
+	background-size: 100% 100%;
+}
+.cart {
+	position: relative;
+}
+.cart .badge {
+	position: absolute;
+	top: 0;
+	left: 62%;
+	transform: translateX(-50%);
+	min-width: 24rpx;
+	min-height: 24rpx;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 20rpx;
+	color: #fff;
+	background-color: #ff4c4c;
+}
+
+.ft-r {
+	flex: 3;
+	display: flex;
+}
+.ft-r-add,
+.ft-r-pay {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80rpx;
+	font-size: 28rpx;
+	color: #fff;
+}
+.ft-r-add {
+	background-color: #ffb5b5;
+	border-radius: 40rpx 0 0 40rpx;
+}
+.ft-r-pay {
+	background-color: #ff4c4c;
+	border-radius: 0 40rpx 40rpx 0;
+}

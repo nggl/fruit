@@ -1,0 +1,27 @@
+<view class="form">
+    <view class="input bdb">
+        <view class="icon-user img" />
+        <input value="{{username}}" placeholder="用户名" />
+    </view>
+    <view class="input bdb">
+        <view class="icon-phone img" />
+        <input value="{{phone}}" type="number" placeholder="手机号" />
+    </view>
+    <view class="input bdb">
+        <view class="icon-side img" />
+        <picker mode="multiSelector" range-key="value" range="{{orinalSides}}" value="{{sideIndex}}" bindchange="sideChange" bindcolumnchange="sideColChange">
+            <input value="{{side}}" disabled placeholder="选择省市区" />
+        </picker>
+        <view class="icon-arrow-right img" />
+    </view>
+    <view class="input bdb">
+        <view style="visibility: hidden;" class="img" />
+        <textarea value="{{detail}}" auto-height show-confirm-bar="{{false}}" placeholder="地址详细信息"></textarea>
+    </view>
+</view>
+<view class="action" bindtap="changeState">
+    <view class="img icon-checked" wx:if="{{state}}"/>
+    <view class="img icon-unchecked" wx:else />
+    <text>设为默认地址</text>
+</view>
+<button class="register" bindtap="confirm">{{buttonText}}</button>

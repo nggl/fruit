@@ -1,66 +1,44 @@
 // pages/me/address/index.js
+const app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+  	list: [{
+  		id: 1,
+  		name: '张三',
+  		phone: '123412342',
+  		side: '按时发斯蒂芬',
+  	}, {
+  		id: 2,
+  		name: '李四',
+  		phone: '123412342',
+  		side: '阿萨德开了房间阿斯蒂芬',
+  	}],
+  	selectedIndex: 1,
+  	id: 0,
+  },
+  onLoad(options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onUnload() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  onShow() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  onShareAppMessage() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+  onPullDownRefresh() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+  onReachBottom() {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+  radioCheck({currentTarget}) {
+  	let {id, index} = currentTarget.dataset
+  	this.setData({id, selectedIndex: index})
+  },
+  delItem() {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -1,2 +1,22 @@
-<!--pages/me/address/index.wxml-->
-<text>pages/me/address/index.wxml</text>
+<block wx:for="{{list}}" wx:key="{{index}}" wx:if="list.length">
+    <view class="item {{selectedIndex === index ? 'active' : ''}}" bindtap="radioCheck" data-id="{{item.id}}" data-index="{{index}}">
+        <view class="item-radio">
+            <view wx:if="{{selectedIndex === index}}" class="img icon-checked" />
+            <view wx:else class="img icon-unchecked" />
+        </view>
+        <view class="item-txt">
+            <view class="item-txt-base">{{item.name}} | {{item.phone}}</view>
+            <view class="item-txt-address">{{item.side}}</view>
+        </view>
+    </view>
+</block>
+<view class="action" wx:if="{{list.length}}">
+    <navigator class="action-btn" url="/pages/me/address/add/index?type=edit&q={{id}}">
+        <view class="img icon-edit" />编辑所选
+    </navigator>
+    <view class="action-btn" bindtap="delItem">
+        <view class="icon-dustbin img" />删除所选
+    </view>
+</view>
+<view class="space-block" wx:else></view>
+<navigator class="add-address" url="/pages/me/address/add/index?type=add">添加地址</navigator>

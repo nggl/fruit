@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hotCitys: [],
+    isSelectCity: false,
+    side: [0, 0, 0],
+    pickSide: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let obj = {name: '长春市'},
+        hotCitys = []
+    for(let i = 9; i > 0; i --) {
+      hotCitys.push(obj)
+    }
+    this.setData({hotCitys})
   },
 
   /**
@@ -62,5 +70,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  searchEvent({detail}) {
+    console.log(detail.value)
+  },
+  sideChange({detail}) {
+    let {postcode, value, code} = detail
+    let pickSide = value.join(' - '),
+        isSelectCity = true,
+        side = code
+    this.setData({pickSide, isSelectCity, side})
+    console.log(detail)
   }
 })

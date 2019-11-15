@@ -1,2 +1,25 @@
-<!--pages/home/side/index.wxml-->
-<text>pages/home/side/index.wxml</text>
+<picker mode="region" class="picker"
+custom-item="全部" 
+value="{{side}}" 
+bindchange="sideChange">
+	<view class="picker-default" wx:if="{{!isSelectCity}}">选择城市</view>
+	<view class="picker-change" wx:else>{{pickSide}}</view>
+</picker>
+<view class="now-side">
+	<image src="/static/home/now-side.png" mode="aspectFill" />
+	<text>当前位置：</text>
+	<view>长沙市</view>
+</view>
+
+<view class="hot-pool">
+	<view class="hot-city">
+		<image src="/static/home/hot.png" mode="aspectFill" />
+		<view>热门城市</view>
+	</view>
+	<view class="hot-city-ul">
+		<view class="hot-city-li"
+		wx:for="{{hotCitys}}" wx:key="{{index}}">
+			{{item.name}}
+		</view>
+	</view>
+</view>

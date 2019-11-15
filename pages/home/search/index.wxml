@@ -1,2 +1,31 @@
-<!--pages/home/search/index.wxml-->
-<text>pages/home/search/index.wxml</text>
+
+<ng-search bindsearch="searchEvent" />
+
+<!-- import goods show style -->
+<import src="../../../modules/goods-show/index"/>
+
+<!-- recomment -->
+<import src="../../../modules/recomment-hr/index"/>
+<view class="recomment" wx:if="{{status === 0}}">
+	<template is="hr" data="{{label: '推荐商品'}}"/>
+	<view class="recomment-list">
+		<navigator url="#"
+	wx:for="{{recomments}}" wx:key="index">
+		<template is="goods-col" data="{{...item}}"/>
+	</navigator>
+	</view>
+</view>
+
+<!-- finded -->
+<block wx:elif="{{status === 1}}">
+	<navigator url="#" class="row"
+	wx:for="{{list}}" wx:key="index">
+		<template is="goods-row" data="{{...item}}" />
+	</navigator>
+</block>
+
+<!-- no-find -->
+<view class="no-find" wx:else
+style="min-height: {{minHeight}}">
+	<image class="no-find-img" src="/static/home/no-search.png" mode="widthFix" />
+</view>

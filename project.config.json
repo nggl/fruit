@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -52,6 +52,34 @@
 					"id": -1,
 					"name": "tabbar/me/index",
 					"pathName": "tabbar/me/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/search/index",
+					"pathName": "pages/home/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/side/index",
+					"pathName": "pages/home/side/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/detail/index",
+					"pathName": "pages/home/detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品下单",
+					"pathName": "pages/home/order/index",
 					"scene": null
 				}
 			]

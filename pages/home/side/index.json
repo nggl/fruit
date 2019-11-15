@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+  	"ng-search": "/components/ng-search-box/index"
+  },
+  "navigationBarTitleText": "选择地区"
 }
