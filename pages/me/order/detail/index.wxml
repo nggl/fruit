@@ -1,0 +1,79 @@
+<view class="tip">
+	<view class="tip-status"
+	wx:if="{{status === 1}}">待付款</view>
+	<view class="tip-status"
+	wx:elif="{{status === 2}}">待发货</view>
+	<view class="tip-status"
+	wx:elif="{{status === 3}}">待收货</view>
+	<view class="tip-status"
+	wx:else>已签收</view>
+	<view class="tip-code">
+		订单编号：{{123412341234}}
+	</view>
+	<view class="tip-time">
+		下单时间：{{'2019-12-12 22:22:22'}}
+	</view>
+</view>
+<view class="address">
+	<view class="address-user">李安妮 | 131****1234</view>
+	<view class="address-side">湖南省-长沙市-开福区 蔡锷北路司马里北大青鸟实力校区31号</view>
+</view>
+
+<view class="goods">
+	<view class="goods-item"
+	wx:for="{{list}}" wx:key="{{index}}">
+		<image src="{{item.img}}" mode="aspectFit" />
+		<view class="goods-item-tip">
+			<view class="goods-item-tip-tt word-online">{{item.tt}}</view>
+			<view class="goods-item-tip-ct word-online">
+				<view class="word-online">{{item.desc}}</view>
+			</view>
+			<view class="goods-item-tip-ft">
+				<text>￥{{item.price}}</text> x{{item.num}}
+			</view>
+		</view>
+	</view>
+	<view class="goods-price">
+		<view class="goods-price-row">
+			<text>定点金额</text>
+			<text>￥{{123}}</text>
+		</view>
+		<view class="goods-price-row">
+			<text>运费</text>
+			<text>￥{{12}}</text>
+		</view>
+	</view>
+	<view class="goods-count">
+		合计：<text>￥{{140.00}}</text>
+	</view>
+</view>
+
+<!-- <view class="payway" wx:if="{{status === 1}}">
+	<view class="payway-ct">
+		<view class="payway-ct-item bdb {{radio === 0 ? 'icon-checked' : 'icon-unchecked'}}"
+		bindtap="paywayChange"
+		data-radio="{{0}}">
+			余额<text>(余额: ￥{{1234}})</text>
+		</view>
+		<view class="payway-ct-item {{radio === 1 ? 'icon-checked' : 'icon-unchecked'}}"
+		bindtap="paywayChange"
+		data-radio="{{1}}">
+			微信支付
+		</view>
+	</view>
+</view> -->
+
+
+<view style="height: 110rpx" 
+wx:if="{{status !== 2}}"></view>
+<view class="fixed"
+wx:if="{{status !== 2}}">
+	<block wx:if="{{status === 1}}">
+		<view class="fixed-btn">取消订单</view>
+		<view class="fixed-btn btn-red">立即支付</view>
+	</block>
+	<block wx:elif="{{status === 3}}">
+		<view class="fixed-btn bbc">查看物流</view>
+		<view class="fixed-btn btn-red">确认收货</view>
+	</block>
+</view>

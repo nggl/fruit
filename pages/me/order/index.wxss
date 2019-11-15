@@ -1,1 +1,153 @@
-/* pages/me/order/index.wxss */
+/* pages/me/order/index.ttss */
+.nav {
+	display: flex;
+	padding: 0 20rpx;
+	background-color: #fff;
+	border-top: 2rpx solid #f2f2f2;
+	position: sticky;
+	left: 0;
+	top: 0;
+}
+.nav-item {
+	flex: 1;
+	color: #666;
+	font-size: 30rpx;
+	text-align: center;
+	padding: 20rpx 0;
+	position: relative;
+}
+.nav-item::after {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4em;
+	height: 4rpx;
+	background-color: #ff4c4c;
+}
+.nav-item.active {
+	color: #ff4c4c;
+}
+.nav-item.active::after {
+	content: "";
+}
+.back-to-top {
+	font-size: 20rpx;
+	color: #fff;
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	right: 30rpx;
+	bottom: 80rpx;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.goods {
+	box-sizing: border-box;
+	width: 710rpx;
+	margin: 20rpx auto 0;
+}
+.goods-item {
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 12rpx;
+	margin-bottom: 20rpx;
+	padding: 20rpx;
+}
+.goods-item-tt {
+	display: flex;
+	justify-content: space-between;
+	font-size: 24rpx;
+	color: #999;
+	padding: 12rpx 0;
+	border-bottom: 2rpx solid #f2f2f2;
+}
+.goods-item-tt view {
+	color: #333;
+}
+.goods-item-tt .c-red {
+	color: #ff4c4c;
+}
+.goods-item-ct {
+	border-bottom: 2rpx solid #f2f2f2;
+	display: flex;
+	padding: 12rpx 0;
+}
+.goods-item-ct image {
+	width: 180rpx;
+	height: 180rpx;
+	margin-right: 20rpx;
+}
+.goods-item-ct-tip {
+	width: 464rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.goods-item-ct-tip-tt {
+	width: 464rpx;
+	font-size: 30rpx;
+}
+.goods-item-ct-tip-ct {
+	width: 464rpx;
+}
+.goods-item-ct-tip-ct view {
+	display: inline-block;
+	padding: 4rpx 6rpx;
+	border-radius: 4rpx;
+	font-size: 24rpx;
+	color: #999;
+	background-color: #f9f9f9;
+}
+.goods-item-ct-tip-ft {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	font-size: 24rpx;
+	color: #999;
+}
+.goods-item-ct-tip-ft text {
+	font-size: 32rpx;
+	color: #ff4c4c;
+}
+.goods-item-ft-count {
+	display: flex;
+	justify-content: flex-end;
+	align-items: baseline;
+	font-size: 24rpx;
+	color: #999;
+	padding: 20rpx 0;
+}
+.goods-item-ft-count text {
+	font-size: 30rpx;
+	color: #ff4c4c;
+}
+.goods-item-ft-btn {
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+	font-size: 24rpx;
+}
+.goods-item-ft-btn view {
+	width: 164rpx;
+	height: 56rpx;
+	border-radius: 28rpx;
+	text-align: center;
+	line-height: 56rpx;
+	margin-left: 16rpx;
+}
+.goods-item-ft-btn .cancel {
+	background-color: #ccc;
+}
+.goods-item-ft-btn .confirm {
+	background-color: #ff4c4c;
+}
+.goods-item-ft-btn .seen {
+	background-color: #999;
+}

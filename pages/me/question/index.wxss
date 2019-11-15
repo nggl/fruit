@@ -1,1 +1,34 @@
-/* pages/me/question/index.wxss */
+input,
+textarea {
+	background-color: #f2f2f2;
+	padding: 12rpx 20rpx;
+	border-radius: 12rpx;
+}
+.form {
+	width: 710rpx;
+	margin: 20rpx auto;
+	box-sizing: border-box;
+	padding: 20rpx 30rpx;
+	border-radius: 12rpx;
+	background-color: #fff;
+}
+.form text {
+	font-size: 30rpx;
+	color: #555;
+}
+.form-group {
+	padding: 12rpx;
+	display: flex;
+	flex-direction: column;
+}
+.form-group label {
+	font-size: 24rpx;
+	color: #999;
+	margin-bottom: 10rpx;
+}
+.form-btn {
+	padding: 20rpx 80rpx;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}

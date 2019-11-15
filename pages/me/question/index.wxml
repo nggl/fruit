@@ -1,2 +1,25 @@
-<!--pages/me/question/index.wxml-->
-<text>pages/me/question/index.wxml</text>
+<view class="form">
+	<form bindsubmit="submit">
+		<text>问题描述</text>
+		<view class="form-group">
+			<label>简要的描述内容：</label>
+			<textarea maxlength="-1"
+			placeholder="简单描述遇到的问题" 
+			show-confirm-bar="{{false}}" 
+			name="content"></textarea>
+		</view>
+		<text>联系方式，选填一项即可</text>
+		<view class="form-group">
+			<label for="phone">电话号码：</label>
+			<input placeholder="输入手机号码..." type="number" name="phone" id="phone" />
+		</view>
+		<view class="form-group">
+			<label for="email">电子邮箱：</label>
+			<input placeholder="输入邮箱地址..." name="email" id="email" />
+		</view>
+		<view class="form-btn">
+			<button size="mini" form-type="reset">重填</button>
+			<button size="mini" form-type="submit" type="primary">提交</button>
+		</view>
+	</form>
+</view>

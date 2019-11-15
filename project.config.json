@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -80,6 +80,13 @@
 					"id": -1,
 					"name": "商品下单",
 					"pathName": "pages/home/order/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "售后问题",
+					"pathName": "pages/me/question/index",
 					"scene": null
 				}
 			]

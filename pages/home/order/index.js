@@ -1,67 +1,44 @@
-// pages/home/order/index.js
 const app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+  	list:[{
+  		src: '/static/home/bananer.jpg',
+  		tt: '台湾 古蒂迷你小饼干夹心饼干，日常零食，素食健康',
+  		desc: '500g；奶油味',
+  		price: '12.00',
+  		num: 1,
+  	}, {
+  		src: '/static/home/bananer.jpg',
+  		tt: 'MEDIHEAL 烤杏仁饼干',
+  		desc: '500g; 韩国制造，厂家直销',
+  		price: '12.00',
+  		num: 1,
+  	}],
+    radio: 0,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload() {
 
   },
+  onShow() {
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
+  },
+  onShareAppMessage() {
+
+  },
   onPullDownRefresh() {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom() {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  paywayChange({currentTarget}) {
+    this.setData({radio: currentTarget.dataset.radio})
+  },
+  confirmPay() {
+    // 确定付款
+    wx.switchTab({url: '/tabbar/me/index'})
   }
 })

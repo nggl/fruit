@@ -1,2 +1,63 @@
-<!--pages/me/order/index.wxml-->
-<text>pages/me/order/index.wxml</text>
+<view class="nav">
+	<view class="nav-item {{navIndex === index ? 'active' : ''}}"
+	hover-class="view-hover"
+	wx:for="{{navs}}" wx:key="{{index}}"
+	data-index="{{index}}"
+	bindtap="navChange">{{item}}</view>
+</view>
+<view class="back-to-top"
+wx:if="{{backToTop}}" 
+bindtap="backToTopEvent">
+	<text>回到</text>
+	<text>顶部</text>
+</view>
+
+
+<view class="goods">
+	<view class="goods-item"
+	wx:for="{{lists}}" wx:key="{{index}}">
+		<view class="goods-item-tt">
+			<text>订单编号: {{item.code}}</text>
+			<view 
+			class="c-red" 
+			wx:if="{{item.status === 1}}">待付款</view>
+			<view
+			wx:elif="{{item.status === 2}}">待发货</view>
+			<view
+			wx:elif="{{item.status === 3}}">待收货</view>
+			<view
+			wx:else>已收货</view>
+		</view>
+		<view class="goods-item-ct"
+		data-status="{{item.status}}"
+		bindtap="jump2Detail"
+		wx:for-item="ite" wx:for-index="ind"
+		wx:for="{{item.list}}" wx:key="{{ind}}">
+			<image src="{{ite.img}}" mode="aspectFit" />
+			<view class="goods-item-ct-tip">
+				<view class="goods-item-ct-tip-tt word-online">{{ite.tt}}</view>
+				<view class="goods-item-ct-tip-ct word-online">
+					<view class="word-online">{{ite.desc}}</view>
+				</view>
+				<view class="goods-item-ct-tip-ft">
+					<text>￥{{ite.price}}</text> x{{ite.num}}
+				</view>
+			</view>
+		</view>
+		<view class="goods-item-ft">
+			<view class="goods-item-ft-count">
+				共{{item.count}}件 合计<text>￥{{item.price}}</text>
+			</view>
+			<view class="goods-item-ft-btn"
+			wx:if="{{item.status === 1}}">
+				<view class="cancel">取消订单</view>
+				<view class="confirm">立即支付</view>
+			</view>
+			<view class="goods-item-ft-btn"
+			wx:elif="{{item.status === 3}}">
+				<view class="cancel">查看物流</view>
+				<view class="confirm">确认收货</view>
+			</view>
+		</view>
+	</view>
+</view>

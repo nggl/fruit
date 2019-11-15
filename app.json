@@ -8,6 +8,7 @@
     "tabbar/cart/index",
     "tabbar/me/index",
     "pages/me/order/index",
+    "pages/me/order/detail/index",
     "pages/me/vip/index",
     "pages/me/address/index",
     "pages/me/address/add/index",

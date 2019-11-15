@@ -1,2 +1,76 @@
-<!--pages/home/order/index.wxml-->
-<text>pages/home/order/index.wxml</text>
+<view class="top-bg icon-top-bg"></view>
+<navigator class="address" url="/pages/me/address/index">
+	<view class="address-user icon-user">收货人：李安妮 131****1234</view>
+	<view class="address-side icon-side">湖南省-长沙市-开福区 蔡锷北路司马里北大青鸟实力校区31号</view>
+	<view class="address-token">默认</view>
+	<view class="icon-arrow-right address-arrow"></view>
+</navigator>
+
+<view class="goods">
+	<view class="goods-item"
+	wx:for="{{list}}" wx:key="{{index}}">
+		<image src="{{item.src}}" mode="aspectFit" />
+		<view class="goods-item-info">
+			<view class="goods-item-info-tt word-online">{{item.tt}}</view>
+			<view class="goods-item-info-ct">
+				<text>{{item.desc}}</text>
+			</view>
+			<view class="goods-item-info-ft">
+				<text>￥{{item.price}}</text>
+				x{{item.num}}
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="order">
+	<view class="order-code">
+		<text>订单编号</text>
+		<text>YJq234123412341234</text>
+	</view>
+	<view class="order-price">
+		<view class="order-price-base">
+			<text>订单金额</text>
+			<text>￥1341</text>
+		</view>
+		<view class="order-price-base">
+			<text>运费</text>
+			<text>￥12</text>
+		</view>
+	</view>
+	<view class="order-ft">
+		共{{2}}件商品 总计: <text>￥{{1234}}</text>
+	</view>
+</view>
+
+<!-- <navigator url="/pages/me/coupon/index" class="coupon icon-arrow-right">
+	<text>优惠券</text>选择优惠券
+</navigator> -->
+
+<!-- <view class="payway">
+	<view class="payway-tt">选择支付方式</view>
+	<view class="payway-ct">
+		<view class="payway-ct-item {{radio === 0 ? 'icon-checked' : 'icon-unchecked'}}"
+		bindtap="paywayChange"
+		data-radio="{{0}}">
+			余额 <text>余额: ￥{{1234}}</text>
+		</view>
+		<view class="payway-ct-item {{radio === 1 ? 'icon-checked' : 'icon-unchecked'}}"
+		bindtap="paywayChange"
+		data-radio="{{1}}">
+			微信支付
+		</view>
+	</view>
+</view> -->
+
+<view style="height: 92rpx"></view>
+<view class="count">
+	<view class="count-tip">
+		合计：
+		<text>共{{2}}件商品</text>
+	</view>
+	<view class="count-btn">
+		<text>￥{{114.00}}</text>
+		<view bindtap="confirmPay">确定付款</view>
+	</view>
+</view>
